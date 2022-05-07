@@ -1,13 +1,347 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/*
+=============== 
+Fonts
+===============
+*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
+
+/*
+=============== 
+Variables
+===============
+*/
+:root {
+  --primary-clr-darker: #103167;
+  --primary-clr-dark: #3777aa;
+  --primary-clr-base: #4691cf;
+  --primary-clr-light: #677b46;
+  --primary-clr-lighter: #c2d5b0;
+  --secondary-clr-darker: #666;
+  --secondary-clr-dark: #bdbdbd;
+  --secondary-clr-base: #e5e5e5;
+  --secondary-clr-light: #f5f5f5;
+  --secondary-clr-lighter: #f9fafb;
+
+  --clr-white: #fff;
+
+  --transition: all 0.3s linear;
+  --box-shadow: 3px 3px 25px rgba(85, 85, 85, 0.101);
+  --font-primary: "Open Sans", sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*:focus {
+  outline-width: 2px;
+  outline-offset: 1px;
+  outline-color: var(--primary-clr-dark);
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+}
+img {
+  width: 100%;
+  height: 100%;
+}
+body {
+  font-family: var(--font-primary);
+  background: var(--clr-white);
+  color: var(--secondary-clr-darker);
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  text-transform: uppercase;
+}
+h1 {
+  font-size: 32px;
+  line-height: 40px;
+}
+h2 {
+  font-size: 28px;
+  line-height: 36px;
+}
+h3 {
+  font-size: 24px;
+  line-height: 30px;
+}
+h4 {
+  font-size: 20px;
+  line-height: 28px;
+}
+h5 {
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.small-title-normal {
+  font-size: 18px;
+  line-height: 25px;
+}
+.small-title-small {
+  font-size: 16px;
+  line-height: 22px;
+}
+.small-title-smallest {
+  font-size: 14px;
+  line-height: 21px;
+}
+.paragraph-normal {
+  font-size: 18px;
+  line-height: 26px;
+}
+.paragraph-small {
+  font-size: 16px;
+  line-height: 26px;
+}
+.paragraph-smallest {
+  font-size: 14px;
+  line-height: 18px;
+}
+
+/*
+=============== 
+Container classes
+===============
+*/
+.wrapper {
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.display-block {
+  display: block !important;
+}
+.gradient-blue {
+  background: linear-gradient(
+    to left,
+    var(--primary-clr-darker),
+    var(--primary-clr-dark)
+  );
+}
+.gradient-white {
+  background: var(--clr-white);
+}
+.gradient-grey {
+  background: linear-gradient(
+    to left,
+    var(--secondary-clr-light),
+    var(--clr-white),
+    var(--secondary-clr-light)
+  );
+}
+
+/*
+=============== 
+Color classes
+===============
+*/
+.white-text {
+  color: var(--clr-white) !important;
+}
+.blue-darker-text {
+  color: var(--primary-clr-darker) !important;
+}
+.blue-dark-text {
+  color: var(--primary-clr-dark) !important;
+}
+.black-text {
+  color: var(--secondary-clr-darker) !important;
+}
+
+/*
+=============== 
+Margin classes
+===============
+*/
+.marginTopMobile-ten {
+  margin-top: 10px !important;
+}
+.marginTopMobile-twenty {
+  margin-top: 20px !important;
+}
+.marginTopMobile-thirty {
+  margin-top: 30px !important;
+}
+.marginTopMobile-forty {
+  margin-top: 40px !important;
+}
+.marginTopMobile-fifty {
+  margin-top: 50px !important;
+}
+.marginBottomMobile-ten {
+  margin-bottom: 10px !important;
+}
+.marginBottomMobile-twenty {
+  margin-bottom: 20px !important;
+}
+.marginBottomMobile-thirty {
+  margin-bottom: 30px !important;
+}
+.marginBottomMobile-forty {
+  margin-bottom: 40px !important;
+}
+.marginBottomMobile-fifty {
+  margin-bottom: 50px !important;
+}
+
+/*
+=============== 
+Buttons
+===============
+*/
+.button-primary-dark,
+.button-primary-light {
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  height: 45px;
+  width: 100%;
+  transition: var(--transition);
+  letter-spacing: 1px;
+  padding-left: 0px;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 1%;
+  text-transform: uppercase;
+}
+.button-primary-dark {
+  background: var(--primary-clr-dark);
+  color: var(--clr-white);
+}
+.button-primary-light {
+  background: var(--clr-white);
+  color: var(--secondary-clr-darker);
+}
+.button-primary-dark:hover,
+.button-primary-light:hover {
+  background: var(--primary-clr-base);
+  padding-left: 5px;
+}
+.button-primary-light:hover {
+  background: var(--secondary-clr-light);
+}
+
+.button-secondary-dark,
+.button-secondary-light {
+  font-size: 18px;
+  line-height: 25px;
+}
+.button-secondary-dark {
+  color: var(--primary-clr-dark);
+}
+.button-secondary-light {
+  color: var(--clr-white);
+}
+.button-secondary-dark:hover {
+  border-bottom: 2px solid var(--primary-clr-dark);
+}
+.button-secondary-light:hover {
+  border-bottom: 2px solid var(--clr-white);
+}
+
+@media screen and (min-width: 767px) {
+  h1 {
+    font-size: 50px;
+    line-height: 58px;
+  }
+  h2 {
+    font-size: 42px;
+    line-height: 55px;
+  }
+  h3 {
+    font-size: 32px;
+    line-height: 42px;
+  }
+  h4 {
+    font-size: 22px;
+    line-height: 33px;
+  }
+  h5 {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  .small-title-normal {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .small-title-small {
+    font-size: 18px;
+    line-height: 27px;
+  }
+  .small-title-smallest {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .paragraph-normal {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .paragraph-small {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  .paragraph-smallest {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .button-primary-dark,
+  .button-primary-light {
+    font-size: 16px;
+    line-height: 22px;
+    height: 50px;
+    max-width: 220px;
+  }
+
+  .button-secondary-dark,
+  .button-secondary-light {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .marginTopDesktop-ten {
+    margin-top: 10px !important;
+  }
+  .marginTopDesktop-twenty {
+    margin-top: 20px !important;
+  }
+  .marginTopDesktop-thirty {
+    margin-top: 30px !important;
+  }
+  .marginTopDesktop-forty {
+    margin-top: 40px !important;
+  }
+  .marginTopDesktop-fifty {
+    margin-top: 50px !important;
+  }
+  .marginBottomDesktop-ten {
+    margin-bottom: 10px !important;
+  }
+  .marginBottomDesktop-twenty {
+    margin-bottom: 20px !important;
+  }
+  .marginBottomDesktop-thirty {
+    margin-bottom: 30px !important;
+  }
+  .marginBottomDesktop-forty {
+    margin-bottom: 40px !important;
+  }
+  .marginBottomDesktop-fifty {
+    margin-bottom: 50px !important;
+  }
 }
