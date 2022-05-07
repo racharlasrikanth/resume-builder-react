@@ -1,12 +1,10 @@
 import React from "react";
-import Styleguide from "./Styleguide";
-import Navbar from "./components/Navbar";
+import Routes from "./Routes/ApplicationRoutes";
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <Styleguide />
+      <Routes />
     </div>
   );
 }

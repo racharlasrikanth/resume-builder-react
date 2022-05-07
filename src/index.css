@@ -56,13 +56,13 @@ body {
   background: var(--clr-white);
   color: var(--secondary-clr-darker);
 }
-h1,
+/* h1,
 h2,
 h3,
 h4,
 h5 {
   text-transform: uppercase;
-}
+} */
 h1 {
   font-size: 32px;
   line-height: 40px;
