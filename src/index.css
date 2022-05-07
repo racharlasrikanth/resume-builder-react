@@ -253,7 +253,20 @@ Buttons
   border-bottom: 2px solid var(--clr-white);
 }
 
-@media screen and (min-width: 767px) {
+.primary-input {
+  /* width: 100%; */
+  height: 45px;
+  font-size: 18px;
+  line-height: 25px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 0px;
+  border: 1px solid var(--secondary-clr-darker);
+  background: var(--secondary-clr-light);
+  letter-spacing: 1px;
+}
+
+@media screen and (min-width: 769px) {
   h1 {
     font-size: 50px;
     line-height: 58px;
@@ -310,6 +323,11 @@ Buttons
 
   .button-secondary-dark,
   .button-secondary-light {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .primary-input {
     font-size: 20px;
     line-height: 30px;
   }

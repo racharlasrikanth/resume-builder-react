@@ -8,6 +8,11 @@ const Styleguide = () => {
       <h3>H3 Text style</h3>
       <h4>H4 Text style</h4>
       <h5>H5 Text style</h5>
+      <input
+        className="primary-input"
+        type="text"
+        placeholder="enter your name"
+      />
       <div className="link">
         <a href="#hello" className="button-secondary-dark">
           Read more
