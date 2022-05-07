@@ -9,12 +9,12 @@ const Styleguide = () => {
       <h4>H4 Text style</h4>
       <h5>H5 Text style</h5>
       <div className="link">
-        <a href="#" className="button-secondary-dark">
+        <a href="#hello" className="button-secondary-dark">
           Read more
         </a>
       </div>
       <div className="link">
-        <a href="#" className="button-secondary-light">
+        <a href="#hello" className="button-secondary-light">
           Read more
         </a>
       </div>
